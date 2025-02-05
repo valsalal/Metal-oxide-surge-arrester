@@ -1,0 +1,79 @@
+*                                                                               
+*   .   .   .   .   .   .   . Case identification card                          
+Simplified IEEE model with NLR                                                  
+*                                                                               
+*   .   .   .   .   .   .   . Time card                                         
+*   1.e-10      20e-9                                            10 1           
+     1.e-9     30e-9                                            10 1            
+*     1.e-9     5.e-5                                            10 1           
+*                                                                               
+*   .   .   .   .   .   .   . Lumped RLC branch                                 
+    nod1  nod2                0.  388.  3.e5   1.0 1                           3
+    nod2  nod3                0.  388. 3.0e5   1.0 1                           3
+    nod3   src                0.   78.  3.e5  .007 1                           3
+     src   srd              .001                                               3
+     sre  nod4                0.   78.  3.e5  .007 1                           3
+    nod4  bus1                0.  388. 3.0e5   .01 1                           3
+    bus1  bus2                  2.0e-3                                         3
+    bus2  bus3                  5.9e-3                                         3
+    bus3  nod5                0.  388.  3.e5   .01 1                           3
+*    bus3  nod2              .35 1.33   .0225 1.65                              
+    bus1                    1.e7                                                
+    bus2                              1.e-4                                     
+    nod5                              1.e-6                                     
+    bus3 nod5               1.                                                  
+*    nod1                    1.e8                                               
+    bus2                              100e-6                                    
+*                                                                               
+*   .   .   .   .   .   .   . Nonlinear resistance (card 1)                     
+92bus2                           .001                                         13
+*                                                                               
+*   .   .   .   .   .   .   . Nonlinear resistance (card 2)                     
+  -20.e3-670.4e3                                                                
+  -10.e3-627.4e3                                                                
+   -3.e3-581.7e3                                                                
+   -1.e3-552.3e3                                                                
+   -.1e3-511.3e3                                                                
+  -2.e-6-425.2e3                                                                
+      0.      0.                                                                
+   2.e-6 425.2e3                                                                
+    .1e3 511.3e3                                                                
+    1.e3 552.3e3                                                                
+    3.e3 581.7e3                                                                
+   10.e3 627.4e3                                                                
+   20.e3 670.4e3                                                                
+9999999.                                                                        
+*                                                                               
+*   .   .   .   .   .   .   . Nonlinear resistance (card 1)                     
+92bus3                           .001                                         23
+*                                                                               
+*   .   .   .   .   .   .   . Nonlinear resistance (card 2)                     
+  -20.e3-572.8e3                                                                
+  -10.e3-529.7e3                                                                
+   -3.e3-484.1e3                                                                
+   -1.e3-454.6e3                                                                
+  -.1e3 -413.7e3                                                                
+  -2.e-6-327.1e3                                                                
+      0.      0.                                                                
+   2.e-6 327.1e3                                                                
+   .1e3  413.7e3                                                                
+    1.e3 454.6e3                                                                
+    3.e3 484.1e3                                                                
+   10.e3 529.7e3                                                                
+   20.e3 572.8e3                                                                
+9999999.                                                                        
+$ = =  End of level 1: Linear and nonlinear elements = = = = =  = = = = = = =   
+*                                                                               
+*   .   .   .   .   .   .   . Time-controlled switch                            
+     srd  sre     -1.e-3      1.e9                                             3
+$ = = =  End of level 2: Switches and piecewise linear elements = = = = = = = = 
+*                                                                               
+*   .   .   .   .   .   .   . Voltage or current sources                        
+*15   src-2     10.e3     1.e-7    10.e-6                        -1.e-4     9999
+*15   src-6     10.e3     8.e-6    20.e-6                        -1.e-4     9999
+15   src-2     10.e3     5.e-9    10.e-6                        -1.e-4     9999
+*15   src-2     10.e3     1.e-8    10.e-6                        -1.e-4     9999.
+*15   src-2     10.e3     1.e-6    10.e-6                        -1.e-4     9999
+$ = = =  End of level 3: Sources  = = = = = = = = = = = = = = = = = = = = = = = 
+ 1       **** All voltages will be printed ****                                 
+$ = = =  Level 5: End of data case  = = = = = = = = = = = = = = = = = = = = = = 
